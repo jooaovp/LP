@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+
+double R, pi, A;
+
+scanf("%lf", &R);
+pi=3.14159;
+A=pi*(R*R);
+
+printf("A=%.4lf\n", A);
+
+return 0;
+}
