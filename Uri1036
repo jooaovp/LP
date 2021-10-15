@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+
+float x, y, n, D, r1, r2;
+
+scanf("%f", &x);
+scanf("%f", &y);
+scanf("%f", &n);
+
+D=(y*y)-4*x*n;
+
+if (D>=0 && x!=0){
+r1=((y*-1)+sqrt(D))/(2*x);
+r2=((y*-1)-sqrt(D))/(2*x);
+printf("R1 = %.5f\n", r1);
+
+printf("R2 = %.5f\n", r2);
+} 
+else 
+printf("Impossivel calcular\n");
+
+return 0;
+}
