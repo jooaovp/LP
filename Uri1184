@@ -7,7 +7,7 @@ double M[12][12], a=0;
 int l, c, cont=0;
 char op;
 
-scanf("%c", &op); //S ou M soma ou media
+scanf("%c", &op);
 
     for(l=0; l<12; l++)
 		for(c=0; c<12; c++){
