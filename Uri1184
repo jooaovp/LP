@@ -10,7 +10,7 @@ char op;
 scanf("%c", &op); //S ou M soma ou media
 
     for(l=0; l<12; l++)
-		for(c=0; c<12; c++){ //leitura de todos os elemntos
+		for(c=0; c<12; c++){
 			scanf("%lf", &M[l][c]);
                 if (c<l){
 					a=a+M[l][c];
@@ -19,7 +19,7 @@ scanf("%c", &op); //S ou M soma ou media
 			}
 
 	if (op=='M'){
-    	a=a/cont; // faz a media dentre os valores da coluna [66 = 11!]
+    	a=a/cont; 
     	printf("%.1lf\n", a);
 	}
     if (op=='S'){
