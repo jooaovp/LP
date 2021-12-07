@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+  int matriz[2][2], i, j, x=1 ;
+  
+    for (i = 0 ; i <= 2 ; i++){
+        for (j = 0 ; j <= 2 ; j++){
+            matriz[i][j]=x;
+            scanf ("%d", &matriz[i][j]) ;
+            printf ("%d ", x);
+            x++;
+        }
+  printf ("\n") ;
+    }
+return 0;
+}
