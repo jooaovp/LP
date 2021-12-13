@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+#define max 5000
+int main(){
+    int vet[max] ,i;
+    
+    for(i=0;i<5000;i++){
+        vet[i] = i;
+         printf("%d ",vet[i]);
+    }
+   
+    return 0;
+}
