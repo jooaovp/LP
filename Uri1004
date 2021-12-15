@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    
+    int A, B;
+    
+    scanf("%d", &A);
+    scanf("%d", &B);
+    
+        printf("PROD = %d", A*B);
+        printf("\n");
+        
+return 0;
+}
