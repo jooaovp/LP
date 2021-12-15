@@ -1,13 +1,15 @@
 #include <stdio.h>
 
-#define max 5000
 int main(){
-    int vet[max] ,i;
+
+int *vetor, i;
     
-    for(i=0;i<5000;i++){
-        vet[i] = i;
-         printf("%d ",vet[i]);
-    }
-   
-    return 0;
+    vetor=malloc(sizeof(int)*5000);
+    
+        for(i=0; i<5000; i++){
+            vetor[i]=i;}
+        for(i=0; i<5000; i++){
+            printf("%d ", vetor[i]);}
+    
+return 0;
 }
