@@ -1,0 +1,45 @@
+#include <stdio.h>
+#define linhas 9
+#define colunas 9
+
+void print(int **matriz, int l, int c);
+void matrizfree(int **matriz, int l);
+
+int main() {
+
+   int **matriz, i, j, l=linhas, c=colunas;
+
+        matriz=(int**)malloc(linhas*sizeof(int*));
+        
+        for(i=0; i<colunas; i++){
+            matriz[i]=(int*)malloc(colunas*sizeof(int));
+        }
+       
+        print(matriz, l, c);
+        matrizfree(matriz, linhas);
+    
+    return 0;
+    
+    }
+   
+    void print(int **matriz, int l, int c){
+
+        int i, j;
+
+            for(i=0; i<l; i++){
+                for(j=0; j<c; j++){
+                     matriz[i][j]=rand()%50;
+                    printf(" %d",matriz[i][j]);
+                }
+            printf("\n");
+            }
+    }
+    void matrizfree(int **matriz, int l){
+
+        int i;
+
+            for(i=0; i<l; i++){
+            free(matriz[i]);
+        }
+            free(matriz);
+    }
