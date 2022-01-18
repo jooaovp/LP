@@ -1,0 +1,99 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define TAM 9
+
+int main(){
+ char v[TAM][TAM];
+ int i, j, k, l, x;
+ int cont=1, aux=1, cont2;
+  
+  scanf("%d", &x); 
+     while (cont<=x){
+        for (i=0; i<TAM; i++){
+          for (j=0; j<TAM; j++){ 
+            scanf("%s", &v[i][j]);
+            }
+        }
+        for (i=0; i<TAM; i++){
+            for (j=0; j<TAM; j++) { 
+                for (k=0; k<TAM; k++){
+                     if (i*i+j*j==i*i+k*k){ 
+                    }
+                        else if (v[i][j]==v[i][k]){
+                        aux=0; 
+                        }
+                }
+            }
+        }
+        for (i=0; i<TAM; i++){
+            for (j=0; j<TAM; j++){
+                for (k=0; k<TAM; k++){
+                    for (l=0; l<TAM; l++){            
+                        if (i*i+j*j==j*j+l*l){ 
+                        }
+                            else if (v[i][j]==v[l][j]){
+                            aux=0;
+                            }
+                    }   
+                }
+            }
+        }
+    cont2=0;
+    
+        while (cont2<3){
+          for (i=3-3; i<3; i++){
+            for (j=0; j<3; j++){ 
+                for (k=3-3; k< 3; k++){ 
+                    for (l=0; l<3; l++){ 
+                        if (i*i+j*j==l*l+k*k){ 
+                        }
+                            else if (v[i][j]==v[k][l]){ 
+                            aux=0; 
+                            }
+                    }   
+                 }
+            }
+         }
+        for (i=3-3; i<3; i++){ 
+            for (j=3; j<6; j++) { 
+              for (k=3-3; k<3; k++){ 
+                for (l=3; l<6; l++){ 
+                  if (i*i+j*j==l*l+k*k){ 
+                    }
+                    else if (v[i][j]==v[k][l]){ 
+                    aux=0;
+                    }
+                }
+              }
+            }
+        }
+        for (i=3-3; i<3; i++){
+            for (j=6; j<TAM; j++){ 
+              for (k=3-3; k<3; k++){ 
+                for (l=6; l<TAM; l++){ 
+                    if (i*i+j*j==l*l+k*k){
+                 }
+                    else if (v[i][j]==v[k][l]){ 
+                    aux=0; 
+                    }
+                }
+              }
+            }
+        }
+      cont2++; 
+    }
+    printf("Instancia %d\n", cont); 
+        if (aux==1){ 
+         printf("SIM\n"); 
+        }
+            else{ 
+             printf("NAO\n"); 
+            }
+            
+    printf("\n"); 
+    cont++; 
+    aux=1; 
+  }
+  return 0;
+}
