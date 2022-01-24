@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#define TAM 60
+
+int main(){
+
+  char palavra1[TAM], palavra2[TAM];
+  unsigned short i=0, casos=1, maior;
+
+  while (casos)
+  {
+    scanf("%hu", &casos);
+    scanf("%s",palavra1);
+    scanf("%s",palavra2);
+    
+    unsigned char tamPlv1=strlen(palavra1), tamPlv2=strlen(palavra2);
+
+    if (tamPlv1>tamPlv2)
+      maior=tamPlv1;
+    else
+      maior=tamPlv2;
+
+    while (maior)
+    {
+
+      if (i<tamPlv1)
+        printf("%c", palavra1[i]);
+      if (i< tamPlv2)
+        printf("%c", palavra2[i]);
+
+      i++;
+      maior--;
+    }
+
+    printf("\n");
+    i=0;
+    casos--;
+  }
+  return 0;
+}
