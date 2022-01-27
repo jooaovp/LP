@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(){
+
+    int n, a, b, resposta;
+
+    scanf("%i", &n);
+    
+        while (n--){
+            scanf("%d %d", &a, &b);
+            resposta = 0;
+        
+        if (b > a) resposta = 1;
+        else {
+            
+        while (b > 0) {
+                
+            if (a % 10 == b % 10) {
+                a /= 10;
+                b /= 10;
+            }
+            else {
+                resposta = 1;
+                break;
+                }
+            }
+        }
+        
+        if (resposta)
+            printf("nao encaixa\n");
+        else
+            printf("encaixa\n");
+
+    }
+    return 0;
+}
