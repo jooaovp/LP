@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() { 
+    
+    char str[200];
+    double distancia, media = 0.0;
+    int contador = 0;
+    
+    while (scanf("%[^\n]%*c", str) != EOF) {
+        scanf("%lf ", &distancia);
+        media += distancia;
+        contador++;
+    }
+    
+    media /= contador;
+    
+    printf("%.1lf\n", media);
+
+    return 0; 
+}
