@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main (){
+
+	int ricardo, vicente, resultado=0;
+	int casos;
+
+	scanf("%d", &casos);
+
+	while (casos--){
+		scanf("%d", &ricardo);
+		scanf("%d", &vicente);
+
+		while (vicente!=0){
+
+			resultado=ricardo%vicente;
+			ricardo=vicente;
+			vicente=resultado;
+		}
+
+		printf("%d\n", ricardo);
+	}
+	return 0;
+}
